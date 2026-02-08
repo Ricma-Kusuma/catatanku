@@ -1,0 +1,115 @@
+/* ====== PASTEL PINK DREAM PALETTE ====== */
+:root {
+  --pink-bg: #fff1f6;
+  --pink-soft: #ffd6e8;
+  --pink-medium: #ffb7d5;
+  --pink-accent: #ff9ac9;
+  --card-white: #ffffff;
+  --text-main: #5a1f40;
+  --danger: #ff8fa3;
+}
+
+/* ====== BODY & BACKGROUND ====== */
+body {
+  background: linear-gradient(180deg, var(--pink-bg), #ffffff);
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+/* ====== HEADER PINK DREAM ====== */
+.header {
+  background: linear-gradient(135deg, var(--pink-medium), var(--pink-soft));
+  color: var(--text-main);
+  padding: 22px;
+  text-align: center;
+  border-radius: 0 0 22px 22px;
+  box-shadow: 0 4px 10px rgba(255, 154, 201, 0.25);
+}
+
+/* ====== LAYOUT MOBILE 9:16 ====== */
+.main {
+  max-width: 420px;      /* ukuran ideal HP portrait */
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* ====== CARD AESTHETIC ====== */
+.card {
+  background: var(--card-white);
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 6px 14px rgba(255, 154, 201, 0.12);
+  border-left: 7px solid var(--pink-accent);
+}
+
+/* ====== INPUT PINK SOFT ====== */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 7px 0;
+  border-radius: 12px;
+  border: 1px solid #ffd6e8;
+  background: #fff8fb;
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+/* ====== TOMBOL SIMPAN ====== */
+button {
+  width: 100%;
+  background: linear-gradient(135deg, var(--pink-medium), var(--pink-accent));
+  color: white;
+  border: none;
+  padding: 11px;
+  border-radius: 14px;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(0.98);
+}
+
+/* ====== DAFTAR CATATAN ====== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: linear-gradient(135deg, #ffffff, #fff5fa);
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ====== TOMBOL HAPUS ====== */
+.hapus {
+  background: var(--danger);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 12px;
+}
+
+/* ====== LINK HALAMAN 2 ====== */
+.link {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  color: #d66ba0;
+  font-weight: bold;
+}
+
+/* ====== FOOTER MANIS ====== */
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #9b6b7f;
+  margin-top: 18px;
+}

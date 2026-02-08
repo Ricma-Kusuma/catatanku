@@ -1,0 +1,32 @@
+<main class="main">
+  <section class="card">
+    <h2 style="text-align:center; color:#d66ba0;">🌸 Semua Catatan 🌸</h2>
+
+    <div id="isiCatatan"></div>
+
+    <a class="link" href="index.html">⬅️ Kembali ke Beranda</a>
+  </section>
+</main>
+
+<script>
+  let daftar = JSON.parse(localStorage.getItem("catatan")) || [];
+  let div = document.getElementById("isiCatatan");
+
+  if (daftar.length === 0) {
+    div.innerHTML = `
+      <div class="card" style="text-align:center;">
+        <p>💖 Belum ada catatan tersimpan.</p>
+        <p>Silakan kembali dan tambah catatan baru.</p>
+      </div>
+    `;
+  } else {
+    daftar.forEach((item) => {
+      div.innerHTML += `
+        <div class="card">
+          <h3 style="color:#d66ba0;">${item.judul}</h3>
+          <p>${item.isi}</p>
+        </div>
+      `;
+    });
+  }
+</script>
