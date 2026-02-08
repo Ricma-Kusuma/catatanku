@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#4F46E5" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192x192-A.png" type="image/png" />
+  <title>CatatanKu PWA</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <h1>📒 CatatanKu</h1>
+    <p>Aplikasi catatan berbasis Progressive Web App</p>
+  </header>
+
+  <main class="main">
+    <section class="card">
+      <h2>📒 CatatanKu</h2>
+      <input id="judul" placeholder="Judul catatan">
+      <textarea id="isi" placeholder="Tulis catatan di sini..."></textarea>
+      <button onclick="simpanCatatan()">➕ Simpan Catatan</button>
+    </section>
+
+    <section class="card">
+      <h3>📋 Daftar Catatan</h3>
+      <ul id="daftarCatatan"></ul>
+    </section>
+
+    <a class="link" href="offline.html">👉 Lihat Semua Catatan (Halaman 2)</a>
+  </main>
+
+  <script src="app.js"></script>
+  
+
+  <footer class="footer">
+    <p>© 2026 Ricma Widya Kusuma Bisdig SMT5</p>
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js')
+        .then(() => console.log('SW registered!'))
+        .catch(err => console.error('SW gagal:', err));
+    }
+  </script>
+
+</body>
+
+</html>
